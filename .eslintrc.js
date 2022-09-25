@@ -18,6 +18,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "comma-dangle": "error",
         "no-console": 2,
         "no-undef": "error",
         "no-redeclare": "error",

@@ -1,10 +1,10 @@
-import { Meteor } from "meteor/meteor"
-import Server from "../imports/api/classes/server/Server"
+import { Meteor } from "meteor/meteor";
+import Server from "../imports/api/classes/server/Server";
 
-import "../imports/api/index"
+import "../imports/api/index";
 
 Meteor.startup(() => {
-	Server.registerFunctions()
-	Server.initServer()
+    Server.registerFunctions();
+    Server.initServer();
 
-})
+});
