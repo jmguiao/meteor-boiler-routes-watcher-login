@@ -25,6 +25,7 @@ class Login extends React.Component {
        
     render(){
         const isLog = AppW.loginConfig.isLogin;
+        const info = AppW.loginConfig.info;
         //console.log("start", isLog);
         if(isLog !== false) {
             return <Navigate to="/"/>;
@@ -40,14 +41,14 @@ class Login extends React.Component {
         <div className="box">
           <h1>Login</h1>
 
-          <h5 className="info">{this.info}</h5>
+          <h5 className="info">{info}</h5>
           {/* <form onSubmit={loginUser}> */}
           
             <input
               className="input-fields"
               onChange={(e) => AppW.setLoginConfig("email", e.target.value)}
               type="email"
-              placeholder="Email"
+              placeholder="Username"
             />
             <br />
             <input

@@ -11,12 +11,17 @@ class Register extends React.Component {
     registerUser = () =>{
         const email = AppW.regConfig.email;
         const password = AppW.regConfig.password;
+        const name = AppW.regConfig.name;
         Accounts.createUser({
             email: email,
-            password: password
+            password: password,
+            profile: {
+                name : name,
+                isActive: true
+            }
         });
-        AppW.setRegConfig("email", "");
-        AppW.setRegConfig("password", "");
+        // AppW.setRegConfig("email", "");
+        // AppW.setRegConfig("password", "");
       
         AppW.setRegConfig("isReg", true);
       
@@ -36,7 +41,13 @@ class Register extends React.Component {
               </div> */}
               <div className="box">
                 <h1>Register</h1>
-               
+                <input
+                    className="input-fields"
+                    onChange={(e) => AppW.setRegConfig("name", e.target.value)}
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <br />
                   <input
                     className="input-fields"
                     onChange={(e) => AppW.setRegConfig("email", e.target.value)}

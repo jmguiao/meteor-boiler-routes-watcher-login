@@ -4,8 +4,8 @@ import ActiveSession from '../Session';
 class AppWatcher extends Watcher {
     #word = ""
     constructor(parent) {
-        super(parent)
-        this.regConfig = { email: "", password: "", info: "", isReg: false};
+        super(parent);
+        this.regConfig = { email: "", password: "", info: "", isReg: false, name: ""};
         this.loginConfig = { email: "", password: "", info: "", isLogin: false};
         this.callFunction = Meteor.call;
         this.callSubscribe = Meteor.subscribe;
